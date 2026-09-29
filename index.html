@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Gyaan - All Sports Updates in One Place</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Frameworks & Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive-style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Sports Gyan Logo.png" class="logo" alt="Sport Gyaan Logo">
+      </a>
+
+      <!-- Clean Animated Hamburger Toggler -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar bar-top"></span>
+        <span class="toggler-bar bar-mid"></span>
+        <span class="toggler-bar bar-bot"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              <i class="fa-solid fa-house nav-icon"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fa-solid fa-circle-info nav-icon"></i> About
+            </a>
+          </li>
+
+          <!-- Sports Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-trophy nav-icon"></i> Sports <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <!-- Sub Category 1: Team & Ball Sports -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-futbol text-danger"></i> Team & Ball Sports
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Basketball</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Hockey</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Volleyball</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Rugby</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Baseball</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Kabaddi</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 2: Racquet & Combat -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-hand-fist text-danger"></i> Racquet & Combat
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Tennis</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Badminton</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Table Tennis</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Boxing</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Wrestling</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 3: Outdoor & Athletics -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-person-running text-danger"></i> Outdoor & Athletics
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Athletics</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Gymnastics</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cycling</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Mountain Biking</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Rock Climbing</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- News Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-newspaper nav-icon"></i> News <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <!-- Sub Category 1: By Sport -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-bolt text-danger"></i> By Sport News
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket Updates</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Basketball Wire</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Tennis & Rackets</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Esports Arena</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Combat & MMA</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 2: Headlines & Transfers -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-fire text-danger"></i> Headlines & Transfers
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Breaking News</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Transfer Rumors</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Match Reports</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Injury Bulletins</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Press Conferences</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 3: Analysis & Features -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-chart-line text-danger"></i> Features & Analysis
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Player Profiles</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Tactical Breakdowns</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Expert Columns</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Historic Legends</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Exclusive Interviews</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Highlights Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-video nav-icon"></i> Highlights <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <!-- Sub Category 1: Match Highlights -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-circle-play text-danger"></i> Match Highlights
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket IPL & T20s</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Football Leagues</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> NBA Basketball</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> UFC & Boxing Fights</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Grand Slam Tennis</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 2: Major Tournaments -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-earth-americas text-danger"></i> Tournaments
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> FIFA World Cup 2026</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Winter Olympics 2026</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> AVC Volleyball Cup</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> HSBC Rugby Premier</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 3: Top Moments -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-star text-danger"></i> Viral Moments
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Top 10 Goals</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Great Catches</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Knockouts of Month</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Buzzer Beaters</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Products Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bag-shopping nav-icon"></i> Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <!-- Sub Category 1: Sportswear -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-shirt text-danger"></i> Sportswear
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Official Jerseys</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Training Kits</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Tracksuits & Hoodies</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Compression Wear</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 2: Equipment & Gear -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-baseball-bat-ball text-danger"></i> Equipment & Gear
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket Bats & Kits</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Footballs & Gloves</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Racquets & Shuttles</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Boxing Gloves & Pads</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 3: Footwear & Accessories -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-shoe-prints text-danger"></i> Footwear & More
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Turf & Cleats</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Running Shoes</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Gym Bags & Bottles</a></li>
+                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Smart Fitness Bands</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Desktop Login Nav Item -->
+          <li class="nav-item d-none d-lg-block ms-lg-2">
+            <a class="nav-link nav-login-btn text-white" href="#">
+              <i class="fa-solid fa-user me-1"></i> Login
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Login Button -->
+        <div class="mobile-login-box d-lg-none">
+          <a href="#" class="btn-login-mobile">
+            <i class="fa-solid fa-user"></i> Login / Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container" id="section1">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 col-12 text-center text-lg-start">
+          <h1 data-aos="fade-down" data-aos-duration="1000">
+            All Sports Updates in One Place
+          </h1>
+          <p data-aos="fade-right" data-aos-duration="1000">
+            Latest Match Highlights, Breaking Sports News & Best Sports Products — Everything in One Place.
+          </p>
+          <a href="#section3" class="btn btn-main mt-3" data-aos="fade" data-aos-duration="1000">
+            Watch Now <i class="fa-solid fa-play ms-2"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-6 col-12 text-center">
+          <img src="images/main.png" class="hero-img img-fluid" alt="Sport Gyaan Highlights" data-aos="fade-left" data-aos-duration="1200">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Stories Section (Responsive Grid, No 900px/150px overflow) -->
+  <section class="top-stories-section">
+    <div class="container">
+      <div class="top-header">
+        <h2 class="fw-bold">Top Stories</h2>
+        <a href="#" class="see-all">
+          See all <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="news-container">
+        <!-- LEFT MAIN STORY -->
+        <div class="left-news">
+          <a href="#">
+            <img src="images/Big.png" alt="Father of Indian Football - Nagendra Prasad Sarbadhikari">
+          </a>
+          <h2>The Father of Indian Football - Nagendra Prasad Sarbadhikari</h2>
+          <p>
+            Nagendra Prasad Sarbadhikari is widely known as the Father of Indian Football, as he played a crucial role in introducing and popularizing the sport in India during the British era. Inspired by British soldiers playing football in Kolkata, he learned the game and began teaching it to Indian youth. His efforts led to the growth of football clubs and laid the foundation for India's football culture, making him one of the most important figures in the history of Indian sports.
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE STORIES -->
+        <div class="right-news">
+          <div class="news-item">
+            <a href="#"><img src="images/1.png" alt="Jarnail Singh"></a>
+            <p><b>Jarnail Singh -</b> The Fearless Defender of Indian Football</p>
+          </div>
+
+          <div class="news-item">
+            <a href="#"><img src="images/2.png" alt="Syed Abdul Rahim"></a>
+            <p><b>Syed Abdul Rahim -</b> The Legendary Coach of Indian Football</p>
+          </div>
+
+          <div class="news-item">
+            <a href="#"><img src="images/3.png" alt="Gostha Pal"></a>
+            <p><b>Gostha Pal -</b> The Great Wall of Indian Football</p>
+          </div>
+
+          <div class="news-item">
+            <a href="#"><img src="images/4.png" alt="Chuni Goswami"></a>
+            <p><b>Chuni Goswami -</b> The Elegant Captain of Indian Football</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- World Rankings Section -->
+  <section class="rankings-section py-5">
+    <div class="container">
+      <div class="rank-section-header">
+        <h2>Sport Gyaan/Coca-Cola World Rankings</h2>
+        <img src="images/cocoLogo.png" class="brand" alt="Coca-Cola Logo">
+      </div>
+
+      <div class="row g-4">
+        <!-- MEN'S RANKINGS -->
+        <div class="col-lg-6 col-12">
+          <div class="rank-card-box">
+            <h4 class="fw-bold mb-1">Latest Official Men's World Ranking</h4>
+            <small class="text-muted d-block mb-3">Last update: 1 Apr 2026</small>
+
+            <div class="rank-header">
+              <div>Rank</div>
+              <div>Team</div>
+              <div class="text-end">Points</div>
+              <div class="text-end">+/-</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">1</span>
+                <span class="dot"></span>
+                <img src="images/flag/france.png" alt="France">
+                <span class="team-name">France</span>
+              </div>
+              <div></div>
+              <div class="points">1877.32</div>
+              <div class="change">-</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">2</span>
+                <span class="dot"></span>
+                <img src="images/flag/spain.png" alt="Spain">
+                <span class="team-name">Spain</span>
+              </div>
+              <div></div>
+              <div class="points">1876.40</div>
+              <div class="change">-</div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">3</span>
+                <span class="dot"></span>
+                <img src="images/flag/Argentina.png" alt="Argentina">
+                <span class="team-name">Argentina</span>
+              </div>
+              <div></div>
+              <div class="points">1874.81</div>
+              <div class="change">-</div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">4</span>
+                <span class="dot"></span>
+                <img src="images/flag/england.png" alt="England">
+                <span class="team-name">England</span>
+              </div>
+              <div></div>
+              <div class="points">1825.97</div>
+              <div class="change">-</div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">5</span>
+                <span class="dot"></span>
+                <img src="images/flag/Portugal.png" alt="Portugal">
+                <span class="team-name">Portugal</span>
+              </div>
+              <div></div>
+              <div class="points">1763.83</div>
+              <div class="change">-</div>
+            </div>
+
+            <div class="mt-4">
+              <a href="#" class="btn fifa-btn">
+                Explore Full Men's Ranking <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WOMEN'S RANKINGS -->
+        <div class="col-lg-6 col-12">
+          <div class="rank-card-box">
+            <h4 class="fw-bold mb-1">LIVE: Women's World Ranking</h4>
+            <small class="text-muted d-block mb-3">Last update: 11 Dec 2025</small>
+
+            <div class="rank-header">
+              <div>Rank</div>
+              <div>Team</div>
+              <div class="text-end">Points</div>
+              <div class="text-end">+/-</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">1</span>
+                <span class="dot"></span>
+                <img src="images/flag/spain.png" alt="Spain">
+                <span class="team-name">Spain</span>
+              </div>
+              <div></div>
+              <div class="points">2082.06</div>
+              <div class="change negative">-12.83</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">2</span>
+                <span class="dot"></span>
+                <img src="images/flag/USA.png" alt="USA">
+                <span class="team-name">USA</span>
+              </div>
+              <div></div>
+              <div class="points">2046.08</div>
+              <div class="change negative">-11.51</div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">3</span>
+                <span class="dot"></span>
+                <img src="images/flag/GER.png" alt="Germany">
+                <span class="team-name">Germany</span>
+              </div>
+              <div></div>
+              <div class="points">2034.51</div>
+              <div class="change positive">+23.71</div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">4</span>
+                <span class="dot"></span>
+                <img src="images/flag/england.png" alt="England">
+                <span class="team-name">England</span>
+              </div>
+              <div></div>
+              <div class="points">2030.85</div>
+              <div class="change positive">+21.17</div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="rank-row">
+              <div class="left">
+                <span class="rank">5</span>
+                <span class="dot"></span>
+                <img src="images/flag/JPN.png" alt="Japan">
+                <span class="team-name">Japan</span>
+              </div>
+              <div></div>
+              <div class="points">2019.85</div>
+              <div class="change positive">+42.51</div>
+            </div>
+
+            <div class="mt-4">
+              <a href="#" class="btn fifa-btn">
+                Explore Full Women's Ranking <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section class="services" id="section3">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Highlights</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/GT vs Panjab.png" class="img-fluid rounded" alt="Gujarat Titans vs Punjab Kings">
+            </a>
+            <h4><strong>Gujarat Titans vs Punjab Kings Clash</strong></h4>
+            <p>Gujarat Titans and Punjab Kings delivered an exciting match with big hits and excellent performances, making it a thrilling contest for fans.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/Highlight 2.png" class="img-fluid rounded" alt="Beneil vs Quillan">
+            </a>
+            <h4><strong>Beneil vs Quillan: Fierce Showdown</strong></h4>
+            <p>Beneil and Quillan delivered a high-intensity battle filled with powerful punches and tactical moves, keeping fans on edge till the very end.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/Highlight 3.png" class="img-fluid rounded" alt="Paris vs Bayern Munich">
+            </a>
+            <h4><strong>Paris vs Bayern Munich</strong></h4>
+            <p>Paris Saint-Germain secured a dramatic 5-4 victory over Bayern Munich in a high-scoring clash full of attacking brilliance and quick goals.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/RRvsS.png" class="img-fluid rounded" alt="Rajasthan Royals vs Sunrisers Hyderabad">
+            </a>
+            <h4><strong>Rajasthan Royals vs Sunrisers Hyderabad Thriller</strong></h4>
+            <p>Rajasthan Royals and Sunrisers Hyderabad delivered an exciting match filled with big hits, nail-biting overs, and key game-turning moments.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/Espanyol vs Real Madrid.jpg" class="img-fluid rounded" alt="Real Madrid vs Espanyol">
+            </a>
+            <h4><strong>Real Madrid Dominate RCD Espanyol</strong></h4>
+            <p>Real Madrid showcased their class with a strong performance against Espanyol, highlighting their attacking prowess and defensive resilience.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/UFC.png" class="img-fluid rounded" alt="Jack vs Carlos UFC">
+            </a>
+            <h4><strong>Jack vs Carlos: Clash of Titans</strong></h4>
+            <p>Jack and Carlos delivered an intense and action-packed fight, showcasing power, octagon control, and supreme tactical determination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winter Olympics Feature Section -->
+  <section class="about" id="section4">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 col-12">
+          <a href="#" style="display:block;">
+            <img src="images/Winter Olympics.png" class="img-fluid rounded-4 shadow-sm w-100" alt="Milano Cortina Winter Olympics 2026">
+          </a>
+        </div>
+        <div class="col-lg-6 col-12">
+          <h2 class="fw-bold">Winter Olympics: A Grand Sporting Success 2026</h2>
+          <p>
+            The Milano Cortina 2026 Winter Olympics was a major global event held in Italy, bringing together over 2,800 athletes from around the world. With 116 exciting events, the tournament showcased top-level competition, historic achievements like Team USA's ice hockey gold, and the successful debut of ski mountaineering, making it a memorable edition of the Winter Games.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News Video / Match Stories Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Latest News</h2>
+      <div class="row g-4">
+        <!-- News 1 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/ind vs afg.png" class="img-fluid rounded" alt="IND vs AFG">
+            </a>
+            <h4><strong>IND vs AFG 2nd ODI</strong></h4>
+            <p>India outclassed Afghanistan in the 2nd ODI with a dominant all-round performance. Shubman Gill's brilliant century guided India to victory.</p>
+          </div>
+        </div>
+
+        <!-- News 2 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/arg vs alg.png" class="img-fluid rounded" alt="Algeria vs Argentina">
+            </a>
+            <h4><strong>Algeria vs Argentina</strong></h4>
+            <p>Argentina dominated Algeria with a commanding 3-0 victory in the FIFA World Cup 2026, displaying clinical attacking quality.</p>
+          </div>
+        </div>
+
+        <!-- News 3 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/iQ00 soul.png" class="img-fluid rounded" alt="iQOO SouL BGIS">
+            </a>
+            <h4><strong>iQOO SouL Champions</strong></h4>
+            <p>iQOO SouL crowned BGIS 2026 Champions after a dominant tournament run, cementing their position as the top BGMI team in India.</p>
+          </div>
+        </div>
+
+        <!-- News 4 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/NBA Finel.png" class="img-fluid rounded" alt="New York Knicks NBA Finals">
+            </a>
+            <h4><strong>Knicks vs Spurs NBA Finals</strong></h4>
+            <p>The New York Knicks ended a 53-year title drought by defeating the San Antonio Spurs 4-1 to capture the NBA Finals 2026 title.</p>
+          </div>
+        </div>
+
+        <!-- News 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/AVC.png" class="img-fluid rounded" alt="AVC Men's Cup 2026">
+            </a>
+            <h4><strong>Bahrain vs India - AVC Cup</strong></h4>
+            <p>India defeated Bahrain 3-0 to book a historic spot in the AVC Men's Cup 2026 semi-finals in international volleyball.</p>
+          </div>
+        </div>
+
+        <!-- News 6 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <a href="#" style="display:block;">
+              <img src="images/boxing.png" class="img-fluid rounded" alt="Jaron Ennis vs Xander Zayas">
+            </a>
+            <h4><strong>Jaron Ennis vs Xander Zayas</strong></h4>
+            <p>Jaron Ennis stopped Xander Zayas in the seventh round to capture the WBA and WBO Super Welterweight world titles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rugby Champions Section -->
+  <section class="about">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 col-12">
+          <a href="#" style="display:block;">
+            <img src="images/rugby.jpg" class="img-fluid rounded-4 shadow-sm w-100" alt="Hyderabad Heroes Rugby Champions">
+          </a>
+        </div>
+        <div class="col-lg-6 col-12">
+          <h2 class="fw-bold">Hyderabad Heroes Crowned Rugby Champions</h2>
+          <p>
+            Hyderabad Heroes delivered a sensational performance to defeat Mumbai Dreamers 41-17 in the HSBC Rugby Premier League Season 2 Final. The champions dominated both attack and defense throughout the match, leaving no chance for their opponents. With this emphatic victory, Hyderabad Heroes lifted the championship trophy in style, marking a historic milestone for their fans.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & Bio -->
+      <div class="footer-box">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Sports Gyan Logo.png" class="footer-logo-img" alt="Sport Gyaan Logo">
+        </a>
+        <p>
+          Your ultimate destination for sports news, live updates, rankings, player stories and much more.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-box">
+        <h3>QUICK LINKS</h3>
+        <div class="links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Live Scores</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Rankings</a></li>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Stories</a></li>
+            <li><a href="#">Products</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Popular Sports -->
+      <div class="footer-box">
+        <h3>POPULAR SPORTS</h3>
+        <div class="links">
+          <ul>
+            <li><i class="fa-solid fa-baseball text-danger"></i> Cricket</li>
+            <li><i class="fa-solid fa-futbol text-danger"></i> Football</li>
+            <li><i class="fa-solid fa-basketball text-danger"></i> Basketball</li>
+          </ul>
+          <ul>
+            <li><i class="fa-solid fa-table-tennis-paddle-ball text-danger"></i> Tennis</li>
+            <li><i class="fa-solid fa-gamepad text-danger"></i> Esports</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social & Contact -->
+      <div class="footer-box">
+        <h3>FOLLOW US</h3>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f text-primary"></i></a>
+          <a href="https://www.instagram.com/sportgyaan_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-danger"></i></a>
+          <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter text-white"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-danger"></i></a>
+        </div>
+        <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-danger"></i> info@sportgyaan.com</p>
+        <p><i class="fa-solid fa-globe me-2 text-danger"></i> www.sportgyaan.com</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &#169; 2026 Sport Gyaan. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
