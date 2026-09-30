@@ -1,179 +1,972 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* ==========================================================================
+   Sport Gyaan - Premium About Page Stylesheet
+   Modern Sports Styling, High-Adrenaline Animations & Responsive Layout
+   ========================================================================== */
 
-* {
-  box-sizing: border-box;
+/* Root Variables for About Page */
+:root {
+  --sg-primary: #ff2d2d;
+  --sg-primary-glow: rgba(255, 45, 45, 0.4);
+  --sg-secondary: #ff5e3a;
+  --sg-dark: #0a0f1d;
+  --sg-dark-card: #111827;
+  --sg-dark-surface: #1e293b;
+  --sg-accent-gold: #ffb703;
+  --sg-accent-cyan: #06d6a0;
+  --sg-gradient-fire: linear-gradient(135deg, #ff2d2d 0%, #ff6b35 100%);
+  --sg-gradient-dark: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+  --sg-text-light: #f8fafc;
+  --sg-text-muted: #94a3b8;
+  --sg-border-light: rgba(255, 255, 255, 0.08);
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #1f2937;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+/* ==========================================================================
+   1. HERO BANNER & PARTICLES
+   ========================================================================== */
+.about-hero-section {
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 45, 45, 0.18) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(255, 107, 53, 0.12) 0%, transparent 40%),
+              linear-gradient(135deg, #080d1a 0%, #0f172a 100%);
+  min-height: 560px;
+  padding: 130px 0 90px;
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: 70px;
+  border-bottom: 1px solid rgba(255, 45, 45, 0.2);
 }
 
-/* About Page Specific Styles */
-.about-hero {
-  background: #07101d;
-  padding: 90px 0;
+/* Dynamic Stadium Grid Lines Background */
+.about-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Glow Orb in Background */
+.hero-glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 45, 45, 0.25) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: pulseGlow 6s ease-in-out infinite alternate;
+}
+
+.hero-glow-orb-1 {
+  top: -100px;
+  right: -50px;
+}
+
+.hero-glow-orb-2 {
+  bottom: -150px;
+  left: -50px;
+  background: radial-gradient(circle, rgba(255, 183, 3, 0.18) 0%, transparent 70%);
+}
+
+/* Hero Badge */
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 45, 45, 0.15);
+  border: 1px solid rgba(255, 45, 45, 0.35);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ff5e5e;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(255, 45, 45, 0.2);
+}
+
+.hero-pill-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff2d2d;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px #ff2d2d;
+  animation: blinkDot 1.5s infinite;
+}
+
+/* Hero Heading */
+.about-hero-title {
+  font-size: clamp(32px, 5.5vw, 62px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.text-sports-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #ff4b2b 60%, #ff2d2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 25px rgba(255, 45, 45, 0.3);
+}
+
+.about-hero-tagline {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: #ff7676;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-hero-tagline::after {
+  content: '';
+  height: 3px;
+  width: 50px;
+  background: var(--sg-gradient-fire);
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.about-hero-desc {
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: #cbd5e1;
+  line-height: 1.75;
+  margin-bottom: 30px;
+  max-width: 620px;
+}
+
+/* Hero CTAs */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.btn-sports-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--sg-gradient-fire);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(255, 45, 45, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   overflow: hidden;
 }
 
-.sub-title {
-  color: #ff2d2d;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 2px;
+.btn-sports-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
 }
 
-.contact-banner {
-  background: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.85)),
-              url('images/011.png') no-repeat center center;
-  background-size: cover;
-  min-height: 440px;
-  display: flex;
+.btn-sports-primary:hover::before {
+  left: 100%;
+}
+
+.btn-sports-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 45, 45, 0.55);
+  color: #ffffff !important;
+}
+
+.btn-sports-outline {
+  display: inline-flex;
   align-items: center;
-  color: white;
-  margin-top: 75px;
-  padding: 80px 0 60px;
-}
-
-.contact-banner h1 {
-  font-size: clamp(34px, 7vw, 75px);
-  color: #ffffff;
-  font-weight: 900;
-  line-height: 1.15;
-  margin-top: 10px;
-}
-
-.contact-banner h1 span {
-  color: #ff2d2d;
-}
-
-.line {
-  width: 60px;
-  height: 4px;
-  background: #ff2d2d;
-  margin: 20px 0;
-  border-radius: 2px;
-}
-
-.contact-banner p {
-  color: #d1d5db;
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.btn-about {
-  display: inline-block;
-  background: #ff2d2d;
-  color: #ffffff;
-  padding: 13px 34px;
-  border-radius: 30px;
-  font-weight: 700;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff !important;
+  font-weight: 600;
   font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 45, 45, 0.3);
 }
 
-.btn-about:hover {
-  background: #ffffff;
-  color: #111827;
-  transform: translateY(-2px);
+.btn-sports-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ff2d2d;
+  color: #ff2d2d !important;
+  transform: translateY(-3px);
 }
 
-/* Mission & Why Choose Us */
-.title-tag {
+/* Hero Right Side - Dynamic 3D Sports Card Showcase */
+.hero-visual-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+}
+
+.hero-main-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.hero-main-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.hero-main-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 22px;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 15, 29, 0.95) 75%);
+}
+
+.hero-card-overlay h5 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.hero-card-overlay p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Floating Sports Badges around Hero */
+.floating-badge {
+  position: absolute;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 16px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  z-index: 3;
 }
 
-.title-tag span {
-  width: 45px;
-  height: 4px;
-  background: #e91e63;
-  border-radius: 2px;
+.floating-badge-1 {
+  top: 15px;
+  left: -20px;
+  animation: floatAnim 4s ease-in-out infinite;
 }
 
-.title-tag h6 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  color: #1f2937;
-  letter-spacing: 1px;
+.floating-badge-2 {
+  bottom: 25px;
+  right: -20px;
+  animation: floatAnim 4s ease-in-out infinite 2s;
 }
 
-.mission-title {
-  font-weight: 800;
-  font-size: clamp(24px, 4.5vw, 42px);
-  color: #111827;
-  line-height: 1.25;
-}
-
-.mission-title span {
-  color: #ff2d2d;
-}
-
-.sports-grid {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.sports-grid img {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.partner-icons {
+.floating-badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--sg-gradient-fire);
+  color: #ffffff;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  margin-top: 25px;
+  justify-content: center;
+  font-size: 17px;
 }
 
-.partner-icons .icon {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
+.floating-badge-text {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.floating-badge-text strong {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.floating-badge-text span {
+  color: #94a3b8;
+}
+
+/* Floating Sports Ball Elements */
+.sports-floating-ball {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.65;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.sports-ball-1 {
+  top: 10%;
+  right: 5%;
+  font-size: 32px;
+  color: #ff4b2b;
+  animation: sportsSpinFloat 7s ease-in-out infinite;
+}
+
+.sports-ball-2 {
+  bottom: 12%;
+  left: 3%;
+  font-size: 26px;
+  color: #ffb703;
+  animation: sportsSpinFloat 6s ease-in-out infinite reverse;
+}
+
+/* ==========================================================================
+   2. INFINITE SPORTS TICKER MARQUEE
+   ========================================================================== */
+.sports-ticker-container {
+  background: #ff2d2d;
+  color: #ffffff;
+  padding: 12px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(255, 45, 45, 0.35);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.sports-ticker-track {
+  display: inline-flex;
+  align-items: center;
+  animation: marqueeTicker 24s linear infinite;
+}
+
+.sports-ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 25px;
+}
+
+.ticker-item i {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.ticker-divider {
+  opacity: 0.4;
+  margin: 0 10px;
+}
+
+/* ==========================================================================
+   3. COUNTER / STATS BAR SECTION
+   ========================================================================== */
+.about-stats-section {
+  background: #ffffff;
+  padding: 45px 0;
+  position: relative;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 18px 12px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #fff1f2;
+  color: #ff2d2d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
   transition: transform 0.3s ease;
 }
 
-.partner-icons .icon:hover {
-  transform: scale(1.1);
+.stat-box:hover .stat-icon {
+  transform: rotate(8deg) scale(1.1);
+  background: #ff2d2d;
+  color: #ffffff;
 }
 
-/* Feature/Value Cards */
-.value-card {
+.stat-number {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-number span {
+  color: #ff2d2d;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   4. MORE THAN JUST SPORTS NEWS (FEATURE SHOWCASE)
+   ========================================================================== */
+.section-headline-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff2d2d;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.section-headline-tag .tag-line {
+  width: 32px;
+  height: 3px;
+  background: #ff2d2d;
+  border-radius: 2px;
+}
+
+.sports-section-title {
+  font-size: clamp(26px, 3.8vw, 42px);
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.sports-section-title span {
+  color: #ff2d2d;
+  position: relative;
+}
+
+.sports-lead-text {
+  font-size: 16.5px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Feature List Pill Grid */
+.story-pillar-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
+
+.story-pillar-card:hover {
+  background: #ffffff;
+  border-color: #fecdd3;
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(255, 45, 45, 0.08);
+}
+
+.story-pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #ff2d2d;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.story-pillar-card:hover .story-pillar-icon {
+  background: #ff2d2d;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.story-pillar-content h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.story-pillar-content p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Feature Collage Visual */
+.feature-visual-box {
+  position: relative;
+  border-radius: 24px;
+  padding: 12px;
+}
+
+.feature-img-main {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.feature-visual-box:hover .feature-img-main {
+  transform: scale(1.02);
+}
+
+/* Interactive Floating Quotes Tag */
+.quote-highlight-box {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  right: 20px;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quote-highlight-box i.quote-icon {
+  font-size: 28px;
+  color: #ff2d2d;
+  flex-shrink: 0;
+}
+
+.quote-highlight-box p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.quote-highlight-box strong {
+  color: #ff6b35;
+}
+
+/* ==========================================================================
+   5. WHAT WE COVER - 14 SPORTS GRID & INTERACTIVE FILTER
+   ========================================================================== */
+.what-we-cover-section {
+  background: #0b1120;
+  color: #ffffff;
+  padding: 95px 0 85px;
+  position: relative;
+  overflow: hidden;
+}
+
+.what-we-cover-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(0deg, #070b14 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.sports-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.sports-filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sports-filter-btn:hover,
+.sports-filter-btn.active {
+  background: var(--sg-gradient-fire);
+  border-color: #ff2d2d;
+  color: #ffffff;
+  box-shadow: 0 5px 20px rgba(255, 45, 45, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Sports 14-Card Matrix */
+.sport-card-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sport-glass-card {
+  position: relative;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.sport-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.sport-glass-card:hover {
+  transform: translateY(-8px);
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(255, 45, 45, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 45, 45, 0.2);
+}
+
+.sport-glass-card:hover::before {
+  background: var(--sg-gradient-fire);
+}
+
+.sport-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.sport-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 45, 45, 0.12);
+  color: #ff4b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.sport-glass-card:hover .sport-badge-icon {
+  background: var(--sg-gradient-fire);
+  color: #ffffff;
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 6px 15px rgba(255, 45, 45, 0.4);
+}
+
+.sport-category-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.sport-glass-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.sport-glass-card:hover h4 {
+  color: #ff5e3a;
+}
+
+.sport-glass-card p {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.sport-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 14px;
+}
+
+.sport-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.sport-badge-live i {
+  font-size: 10px;
+}
+
+.sport-action-arrow {
+  color: #ff2d2d;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.sport-glass-card:hover .sport-action-arrow {
+  transform: translateX(5px);
+}
+
+/* Coverage Bottom Summary Box */
+.coverage-summary-banner {
+  background: linear-gradient(135deg, rgba(255, 45, 45, 0.15) 0%, rgba(255, 107, 53, 0.08) 100%);
+  border: 1px solid rgba(255, 45, 45, 0.3);
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-top: 50px;
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 2;
+}
+
+.coverage-summary-banner h4 {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin-bottom: 8px;
+}
+
+.coverage-summary-banner p {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. OUR MISSION - 3 STRATEGIC PILLARS
+   ========================================================================== */
+.mission-section {
+  padding: 95px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.mission-card {
   background: #ffffff;
   border: 1px solid #f1f5f9;
-  border-radius: 16px;
-  padding: 28px 24px;
-  text-align: left;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  padding: 35px 28px;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-.value-card:hover {
+.mission-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--sg-gradient-fire);
+  transition: width 0.4s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 45, 45, 0.1);
+  border-color: #fed7aa;
+}
+
+.mission-card:hover::after {
+  width: 100%;
+}
+
+.mission-number {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffedd5;
+  line-height: 1;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  transition: color 0.3s ease;
+}
+
+.mission-card:hover .mission-number {
+  color: #ff6b35;
+}
+
+.mission-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #fff1f2;
+  color: #ff2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover .mission-icon {
+  background: #ff2d2d;
+  color: #ffffff;
+  transform: rotate(6deg) scale(1.08);
+}
+
+.mission-card h4 {
+  font-size: 21px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.mission-card p {
+  font-size: 14.5px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. WHY SPORT GYAAN? - HIGH IMPACT CARDS
+   ========================================================================== */
+.why-sg-section {
+  background: #f8fafc;
+  padding: 95px 0;
+  position: relative;
+}
+
+.why-quote-banner {
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 30px 40px;
+  color: #ffffff;
+  margin-bottom: 45px;
+  border-left: 6px solid #ff2d2d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.why-quote-banner h3 {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.why-quote-banner h3 span {
+  color: #ff4b2b;
+}
+
+.why-quote-banner p {
+  color: #94a3b8;
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.why-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 30px 24px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.why-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
-  border-color: #fecdd3;
+  border-color: #ff4b2b;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
-.value-card .value-icon {
-  width: 55px;
-  height: 55px;
+.why-card-icon {
+  width: 52px;
+  height: 52px;
   border-radius: 14px;
   background: #fef2f2;
   color: #ff2d2d;
@@ -181,19 +974,242 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-.value-card h4 {
+.why-card:hover .why-card-icon {
+  background: var(--sg-gradient-fire);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.why-card h4 {
   font-size: 19px;
   font-weight: 700;
-  color: #111827;
+  color: #0f172a;
   margin-bottom: 10px;
 }
 
-.value-card p {
-  font-size: 14.5px;
+.why-card p {
+  font-size: 14px;
   color: #64748b;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
 }
+
+/* ==========================================================================
+   8. GRAND SLOGAN CTA STADIUM BANNER
+   ========================================================================== */
+.slogan-cta-section {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(255, 45, 45, 0.2) 0%, transparent 70%),
+              linear-gradient(135deg, #0b1120 0%, #1e1b4b 50%, #0f172a 100%);
+  padding: 85px 0;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 45, 45, 0.3);
+}
+
+.slogan-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/011.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.slogan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 45, 45, 0.2);
+  border: 1px solid rgba(255, 45, 45, 0.4);
+  color: #ff7676;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.slogan-title {
+  font-size: clamp(28px, 5vw, 54px);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.slogan-title span {
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff8c42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slogan-subtitle {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+.slogan-btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   9. KEYFRAME ANIMATIONS & EFFECTS
+   ========================================================================== */
+@keyframes marqueeTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes floatAnim {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes sportsSpinFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes blinkDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+
+/* ==========================================================================
+   10. RESPONSIVE OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .about-hero-section {
+    padding: 100px 0 70px;
+    min-height: auto;
+  }
+
+  .hero-visual-wrapper {
+    margin-top: 40px;
+  }
+
+  .floating-badge-1 {
+    top: 5px;
+    left: 0;
+  }
+
+  .floating-badge-2 {
+    bottom: 5px;
+    right: 0;
+  }
+
+  .quote-highlight-box {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-cta-group,
+  .slogan-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-sports-primary,
+  .btn-sports-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .why-quote-banner {
+    padding: 22px 20px;
+  }
+
+  .coverage-summary-banner {
+    padding: 22px 20px;
+  }
+}
+
+/* ==========================================================================
+   11. PARTNER ICONS & ENHANCED EFFECTS
+   ========================================================================== */
+.partner-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.partner-icons .icon {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.partner-icons .icon:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 20px rgba(255, 45, 45, 0.18);
+  border-color: #fecdd3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
