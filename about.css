@@ -621,6 +621,10 @@
   overflow: hidden;
 }
 
+.what-we-cover-section .coverage-intro {
+  color: var(--sg-text-light);
+}
+
 .what-we-cover-section::after {
   content: '';
   position: absolute;
@@ -758,7 +762,7 @@
 
 .sport-glass-card p {
   font-size: 13.5px;
-  color: #94a3b8;
+  color: #f7f8fa;
   line-height: 1.6;
   margin-bottom: 16px;
 }
