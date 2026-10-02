@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football | Sport Gyaan</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Frameworks & Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive-style.css">
+  <link rel="stylesheet" href="football.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Sports Gyan Logo.png" class="logo" alt="Sport Gyaan Logo">
+      </a>
+
+      <!-- Mobile Quick Search Button -->
+      <button class="mobile-search-btn d-lg-none" type="button" id="mobileSearchTrigger" aria-label="Open search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <!-- Clean Animated Hamburger Toggler -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar bar-top"></span>
+        <span class="toggler-bar bar-mid"></span>
+        <span class="toggler-bar bar-bot"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fa-solid fa-house nav-icon"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fa-solid fa-circle-info nav-icon"></i> About
+            </a>
+          </li>
+
+          <!-- Sports Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-trophy nav-icon"></i> Sports <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <!-- Sub Category 1: Team & Ball Sports -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-futbol text-danger"></i> Team & Ball Sports
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html" class="fw-bold text-danger"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
+                          <li><a href="index.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> Cricket</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Basketball</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Hockey</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Volleyball</a></li>
+                          <li><a href="index.html#rugby"><i class="fa-solid fa-angle-right me-1"></i> Rugby</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Baseball</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Kabaddi</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 2: Racquet & Combat -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-hand-fist text-danger"></i> Racquet & Combat
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Tennis</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Badminton</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Table Tennis</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Boxing</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Wrestling</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sub Category 3: Outdoor & Athletics -->
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-person-running text-danger"></i> Outdoor & Athletics
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Athletics</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Gymnastics</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Cycling</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Mountain Biking</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Rock Climbing</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- News Dropdown with Sub-Categories -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-newspaper nav-icon"></i> News <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-bolt text-danger"></i> By Sport News
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html" class="fw-bold text-danger"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Cricket Updates</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Basketball Wire</a></li>
+                          <li><a href="about.html#what-we-cover"><i class="fa-solid fa-angle-right me-1"></i> Tennis & Rackets</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Esports Arena</a></li>
+                          <li><a href="index.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> Combat & MMA</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-fire text-danger"></i> Headlines & Transfers
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html#breaking-news"><i class="fa-solid fa-angle-right me-1"></i> Breaking News</a></li>
+                          <li><a href="football.html#transfers"><i class="fa-solid fa-angle-right me-1"></i> Transfer Rumors</a></li>
+                          <li><a href="football.html#la-liga"><i class="fa-solid fa-angle-right me-1"></i> Match Reports</a></li>
+                          <li><a href="football.html#world-cup"><i class="fa-solid fa-angle-right me-1"></i> Injury Bulletins</a></li>
+                          <li><a href="football.html#world-cup"><i class="fa-solid fa-angle-right me-1"></i> Press Conferences</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-chart-line text-danger"></i> Features & Analysis
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html#indian-legends"><i class="fa-solid fa-angle-right me-1"></i> Player Profiles</a></li>
+                          <li><a href="football.html#tactics"><i class="fa-solid fa-angle-right me-1"></i> Tactical Breakdowns</a></li>
+                          <li><a href="about.html"><i class="fa-solid fa-angle-right me-1"></i> Expert Columns</a></li>
+                          <li><a href="football.html#indian-legends"><i class="fa-solid fa-angle-right me-1"></i> Historic Legends</a></li>
+                          <li><a href="about.html"><i class="fa-solid fa-angle-right me-1"></i> Exclusive Interviews</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Highlights Dropdown -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-video nav-icon"></i> Highlights <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-circle-play text-danger"></i> Match Highlights
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="index.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> Cricket IPL & T20s</a></li>
+                          <li><a href="football.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> Football Leagues</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> NBA Basketball</a></li>
+                          <li><a href="index.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> UFC & Boxing Fights</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-earth-americas text-danger"></i> Tournaments
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html#world-cup"><i class="fa-solid fa-angle-right me-1"></i> FIFA World Cup 2026</a></li>
+                          <li><a href="index.html#winter-olympics"><i class="fa-solid fa-angle-right me-1"></i> Winter Olympics 2026</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> AVC Volleyball Cup</a></li>
+                          <li><a href="index.html#rugby"><i class="fa-solid fa-angle-right me-1"></i> HSBC Rugby Premier</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-star text-danger"></i> Viral Moments
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="football.html#top-goals"><i class="fa-solid fa-angle-right me-1"></i> Top 10 Goals</a></li>
+                          <li><a href="index.html#highlights"><i class="fa-solid fa-angle-right me-1"></i> Great Catches</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Knockouts of Month</a></li>
+                          <li><a href="index.html#latest-news"><i class="fa-solid fa-angle-right me-1"></i> Buzzer Beaters</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bag-shopping nav-icon"></i> Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="mobile-sub-accordion">
+                <div class="row g-3">
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-shirt text-danger"></i> Sportswear
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Official Football Jerseys</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Training Kits</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Tracksuits & Hoodies</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-baseball-bat-ball text-danger"></i> Equipment & Gear
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Match Footballs & Gloves</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Cricket Bats & Kits</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Racquets & Shuttles</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-12">
+                    <div class="sub-category-card">
+                      <div class="sub-cat-toggle">
+                        <span class="sub-cat-title">
+                          <i class="fa-solid fa-shoe-prints text-danger"></i> Footwear & More
+                        </span>
+                        <i class="fa-solid fa-chevron-down sub-cat-chevron d-lg-none"></i>
+                      </div>
+                      <div class="sub-cat-content">
+                        <ul class="sub-cat-list">
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Football Turf & Cleats</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Running Shoes</a></li>
+                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Gym Bags & Bottles</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Navbar Search Component -->
+          <li class="nav-item nav-search-item ms-lg-2 position-relative">
+            <div class="nav-search-wrapper" id="navSearchWrapper">
+              <i class="fa-solid fa-magnifying-glass nav-search-icon" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                class="form-control nav-search-input" 
+                id="navSearchInput" 
+                placeholder="Search sports, news, matches..." 
+                autocomplete="off" 
+                spellcheck="false"
+                aria-label="Search sports and news"
+              >
+              <button type="button" class="nav-search-clear d-none" id="searchClearBtn" aria-label="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <!-- Live Search Suggestions Dropdown -->
+            <div class="search-results-dropdown d-none" id="searchResultsDropdown">
+              <div class="search-results-header">
+                <span class="search-count" id="searchCount">Sport Gyaan Search</span>
+                <span class="search-hint"><kbd>Enter</kbd> to open</span>
+              </div>
+              <div class="search-results-list" id="searchResultsList"></div>
+            </div>
+          </li>
+
+          <!-- Desktop Login Nav Item -->
+          <li class="nav-item d-none d-lg-block ms-lg-2">
+            <a class="nav-link nav-login-btn text-white" href="#">
+              <i class="fa-solid fa-user me-1"></i> Login
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Login Button -->
+        <div class="mobile-login-box d-lg-none">
+          <a href="#" class="btn-login-mobile">
+            <i class="fa-solid fa-user"></i> Login / Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO: FOOTBALL PAGE / PREMIUM SPORTS BANNER
+       ========================================================================== -->
+  <header class="football-hero" id="breaking-news">
+    <video class="football-hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+      <source src="Background%20videos/football%20background%20video%20.mp4" type="video/mp4">
+    </video>
+    <div class="hero-glow-orb hero-glow-orb-1"></div>
+    <div class="hero-glow-orb hero-glow-orb-2"></div>
+
+    <i class="fa-solid fa-futbol sports-floating-ball sports-ball-1" aria-hidden="true"></i>
+
+    <div class="container position-relative hero-content-shell">
+      <div class="row align-items-center g-5">
+        <div class="col-12 football-hero-copy" data-aos="fade-up" data-aos-duration="900">
+          <div class="football-badge-pill">
+            <span class="badge-dot"></span>
+            <span>Football Hub</span>
+          </div>
+
+          <h1 class="football-main-title">
+            Latest <span class="text-sports-gradient">Football</span> Action
+          </h1>
+
+          <div class="football-hero-tagline">
+            Top-league scores & matchday stories
+          </div>
+
+          <p class="football-hero-desc">
+            Stay close to the biggest fixtures, tactical battles, and breakthrough moments shaping the beautiful game. From title races to underdog stories, Sport Gyaan brings the passion of football to your fingertips.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#footballMatchGrid" class="btn-sports-primary">
+              <i class="fa-solid fa-trophy"></i> Explore Matches
+            </a>
+            <a href="#indian-legends" class="btn-sports-outline">
+              <i class="fa-solid fa-earth-americas"></i> Football Legends
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section class="football-feature-banner" aria-label="Football feature banner">
+    <div class="container">
+      <div class="football-banner-shell">
+        <div class="football-banner-inner">
+          <h2 class="football-banner-title">Latest <strong>Results</strong></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="football-grid-section" id="world-cup">
+    <div class="container">
+      <div id="footballMatchGrid" class="football-match-grid" aria-label="Football match cards"></div>
+    </div>
+  </section>
+
+  <script>
+    const footballMatches = [
+      ['2026-09-21', 'Liga MX', 'Querétaro', 1, 'León', 1, 222, 228],
+      ['2026-09-21', 'Liga MX', 'Pachuca', 2, 'Tijuana', 2, 234, 10125],
+      ['2026-09-21', 'Liga MX', 'Toluca', 2, 'Santos', 3, 223, 225],
+      ['2026-09-20', 'MLS', 'Inter Miami CF', 2, 'San Diego FC', 2, 20232, 22529],
+      ['2026-09-20', 'Portuguese Liga', 'FC Porto', 3, 'Benfica', 1, 437, 1929],
+      ['2026-09-20', 'LALIGA', 'Valencia', 2, 'Real Sociedad', 3, 94, 89],
+      ['2026-09-20', 'Serie A', 'AC Milan', 3, 'Lecce', 0, 103, 113],
+      ['2026-09-20', 'Ligue 1', 'Marseille', 1, 'Paris Saint-Germain', 2, 176, 160],
+      ['2026-09-20', 'Bundesliga', 'SC Paderborn 07', 3, 'TSG Hoffenheim', 1, 3307, 7911],
+      ['2026-09-20', 'Portuguese Liga', 'Estoril', 1, 'Casa Pia', 2, 12216, 21581],
+      ['2026-09-20', 'Portuguese Liga', 'Santa Clara', 0, 'Braga', 0, 12215, 2994],
+      ['2026-09-20', 'LALIGA', 'Deportivo', 1, 'Real Betis', 1, 90, 244],
+      ['2026-09-20', 'LALIGA', 'Villarreal', 3, 'Levante', 1, 102, 1538],
+      ['2026-09-20', 'Serie A', 'Juventus', 2, 'Atalanta', 0, 111, 105],
+      ['2026-09-20', 'Premier League', 'Fulham', 1, 'Manchester United', 1, 370, 360],
+      ['2026-09-20', 'Bundesliga', 'Schalke 04', 0, 'SV Elversberg', 0, 133, 10388],
+      ['2026-09-20', 'Ligue 1', 'Nice', 2, 'Lille', 1, 2502, 166],
+      ['2026-09-20', 'Portuguese Liga', 'Estrela', 0, 'Académico de Viseu', 2, 21610, 21607],
+      ['2026-09-20', 'Portuguese Liga', 'Vitória de Guimarães', 1, 'Moreirense', 1, 5309, 3696],
+      ['2026-09-20', 'LALIGA', 'Atlético Madrid', 2, 'Real Madrid', 1, 1068, 86],
+      ['2026-09-20', 'Bundesliga', 'Bayer Leverkusen', 2, 'RB Leipzig', 0, 131, 11420],
+      ['2026-09-20', 'Premier League', 'AFC Bournemouth', 0, 'Liverpool', 1, 349, 364],
+      ['2026-09-20', 'Premier League', 'Leeds United', 0, 'Crystal Palace', 0, 357, 384],
+      ['2026-09-20', 'Premier League', 'Manchester City', 5, 'Sunderland', 3, 382, 366],
+      ['2026-09-20', 'Serie A', 'Frosinone', 2, 'Como', 0, 4057, 2572],
+      ['2026-09-20', 'Serie A', 'Parma', 2, 'Genoa', 1, 115, 3263],
+      ['2026-09-20', 'Ligue 1', 'AJ Auxerre', 2, 'Brest', 1, 172, 6997],
+      ['2026-09-20', 'LALIGA', 'Getafe', 1, 'Málaga', 0, 2922, 99],
+      ['2026-09-20', 'Serie A', 'Fiorentina', 1, 'Napoli', 1, 109, 114],
+      ['2026-09-20', 'Liga MX', 'América', 2, 'Guadalajara', 2, 227, 219],
+      ['2026-09-20', 'MLS', 'Portland Timbers', 0, 'Atlanta United FC', 1, 9723, 18418],
+      ['2026-09-20', 'MLS', 'Colorado Rapids', 3, 'Seattle Sounders FC', 3, 184, 9726],
+      ['2026-09-20', 'MLS', 'Nashville SC', 3, 'Chicago Fire FC', 0, 18986, 182],
+      ['2026-09-20', 'MLS', 'Real Salt Lake', 0, 'Vancouver Whitecaps', 3, 4771, 9727],
+      ['2026-09-20', 'Liga MX', 'Monterrey', 1, 'Cruz Azul', 0, 220, 218],
+      ['2026-09-20', 'MLS', 'FC Dallas', 0, 'Austin FC', 0, 185, 20906],
+      ['2026-09-20', 'MLS', 'Houston Dynamo FC', 2, 'FC Cincinnati', 2, 6077, 18267],
+      ['2026-09-20', 'MLS', 'Minnesota United FC', 2, 'LA Galaxy', 3, 17362, 187],
+      ['2026-09-20', 'MLS', 'Sporting Kansas City', 3, 'Philadelphia Union', 4, 186, 10739],
+      ['2026-09-20', 'MLS', 'St. Louis CITY SC', 3, 'Toronto FC', 1, 21812, 7318]
+    ];
+
+    const footballMatchPhotos = {
+      'AFC Bournemouth|Liverpool': 'https://a.espncdn.com/photo/2026/0920/r1719454_1296x729_16-9.jpg',
+      'Leeds United|Crystal Palace': 'https://a.espncdn.com/photo/2026/0920/r1719456_1296x729_16-9.jpg',
+      'Manchester City|Sunderland': 'https://a.espncdn.com/photo/2026/0920/r1719453_1296x729_16-9.jpg',
+      'Fulham|Manchester United': 'https://a.espncdn.com/photo/2026/0920/r1719540_1296x729_16-9.jpg',
+      'Atlético Madrid|Real Madrid': 'https://a.espncdn.com/photo/2026/0920/r1719506_1296x729_16-9.jpg',
+      'AC Milan|Lecce': 'https://a.espncdn.com/photo/2026/0920/r1719672_1296x729_16-9.jpg',
+      'Marseille|Paris Saint-Germain': 'https://a.espncdn.com/photo/2026/0920/r1719673_1296x729_16-9.jpg'
+    };
+
+    const grid = document.getElementById('footballMatchGrid');
+    if (grid) {
+      footballMatches.forEach(([date, competition, home, homeScore, away, awayScore, homeId, awayId]) => {
+        const dateLabel = new Intl.DateTimeFormat('en', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric'
+        }).format(new Date(`${date}T12:00:00`));
+        const matchPhoto = footballMatchPhotos[`${home}|${away}`];
+        const card = document.createElement('article');
+        card.className = 'football-match-card';
+        card.innerHTML = `
+          <div class="football-card-image${matchPhoto ? ' has-photo' : ''}" role="img" aria-label="${home} ${homeScore}, ${away} ${awayScore}">
+            ${matchPhoto ? `<img class="match-action-photo" src="${matchPhoto}" alt="" loading="lazy" decoding="async">` : ''}
+            <div class="match-card-team">
+              <img src="https://a.espncdn.com/i/teamlogos/soccer/500/${homeId}.png" alt="" loading="lazy" decoding="async">
+              <span>${home}</span>
+            </div>
+            <strong class="match-card-score">${homeScore} : ${awayScore}</strong>
+            <div class="match-card-team">
+              <img src="https://a.espncdn.com/i/teamlogos/soccer/500/${awayId}.png" alt="" loading="lazy" decoding="async">
+              <span>${away}</span>
+            </div>
+          </div>
+          <div class="football-card-body">
+            <span class="football-card-tag">${competition}</span>
+            <h3 class="football-card-title">${home} <span aria-hidden="true">vs</span> ${away}</h3>
+            <p class="football-card-copy">Full time · ${dateLabel}</p>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  </script>
+
+  <!-- ==========================================================================
+       SECTION 2: INDIAN FOOTBALL HERITAGE & LEGENDS SPOTLIGHT
+       ========================================================================== -->
+  <section class="py-5 bg-light" id="indian-legends">
+    <div class="container">
+      <div class="football-section-header" data-aos="fade-up">
+        <div class="football-badge-pill">
+          <i class="fa-solid fa-landmark text-danger"></i> Heritage Spotlight
+        </div>
+        <h2>The Pioneers & Legends of Indian Football</h2>
+        <p>From the pioneering visionary who introduced the sport to the icons of the Golden Era, discover the history of Indian football.</p>
+      </div>
+
+      <!-- Main Legend Feature Card -->
+      <div class="card border-0 rounded-4 shadow-sm overflow-hidden mb-5" data-aos="fade-up">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-6 col-12">
+            <img src="images/Big.png" class="img-fluid w-100 h-100 football-legend-image" alt="Nagendra Prasad Sarbadhikari">
+          </div>
+          <div class="col-lg-6 col-12 p-4 p-lg-5">
+            <span class="badge bg-danger mb-2 px-3 py-2 fw-semibold">HISTORIC ICON</span>
+            <h3 class="fw-bold fs-2 text-dark mb-3">Nagendra Prasad Sarbadhikari</h3>
+            <h5 class="text-danger fw-semibold mb-3">The Father of Indian Football</h5>
+            <p class="text-muted football-copy-lead">
+              Nagendra Prasad Sarbadhikari is revered across India for his visionary courage in bringing football to the subcontinent during the colonial British era. Inspired by British soldiers playing football in Kolkata's fields, he took the ball into his own hands, taught Indian youngsters, and founded indigenous football clubs that ignited a nationwide sporting revolution.
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-4">
+              <div class="border-start border-danger border-4 ps-3">
+                <span class="d-block fw-bold text-dark">Founded Sovabazar Club (1887)</span>
+                <span class="text-muted small">Laid the cornerstone of Indian club football</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Indian Football Legends Grid -->
+      <div class="row g-4">
+        <!-- Legend 1 -->
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="legend-card-vertical">
+            <img src="images/1.png" alt="Jarnail Singh">
+            <span class="badge bg-danger-subtle text-danger mb-2">Legendary Defender</span>
+            <h4>Jarnail Singh</h4>
+            <p>Known as the fearless defender of Indian football. His aerial supremacy, courage, and leadership anchored India to the Asian Games 1962 Gold Medal.</p>
+          </div>
+        </div>
+
+        <!-- Legend 2 -->
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="legend-card-vertical">
+            <img src="images/2.png" alt="Syed Abdul Rahim">
+            <span class="badge bg-danger-subtle text-danger mb-2">Master Tactician</span>
+            <h4>Syed Abdul Rahim</h4>
+            <p>The legendary coach who orchestrated India’s Golden Era in football. His revolutionary tactical genius led India to multiple international crowns and the 1956 Olympic semi-finals.</p>
+          </div>
+        </div>
+
+        <!-- Legend 3 -->
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="legend-card-vertical">
+            <img src="images/3.png" alt="Gostha Pal">
+            <span class="badge bg-danger-subtle text-danger mb-2">The Great Wall</span>
+            <h4>Gostha Pal</h4>
+            <p>Celebrated as the "Great Wall of China" for his impenetrable defensive bravery. He became the first barefoot captain of Mohun Bagan to conquer historic British teams.</p>
+          </div>
+        </div>
+
+        <!-- Legend 4 -->
+        <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+          <div class="legend-card-vertical">
+            <img src="images/4.png" alt="Chuni Goswami">
+            <span class="badge bg-danger-subtle text-danger mb-2">Golden Captain</span>
+            <h4>Chuni Goswami</h4>
+            <p>The elegant forward and captain whose sublime dribbling, vision, and leadership captained India to glory at the 1962 Asian Games, acclaimed across Asia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: EUROPEAN LEAGUES & CLUB THRILLERS
+       ========================================================================== -->
+  <section class="py-5" id="highlights">
+    <div class="container">
+      <div class="football-section-header" data-aos="fade-up">
+        <div class="football-badge-pill">
+          <i class="fa-solid fa-trophy text-danger"></i> Club Football
+        </div>
+        <h2>European League Headlines & Showdowns</h2>
+        <p>Catch up on the latest masterclasses from La Liga, UEFA Champions League, and top domestic leagues.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Match 1: Real Madrid vs Espanyol -->
+        <div class="col-lg-6 col-12" id="la-liga" data-aos="fade-right">
+          <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+            <img src="images/Espanyol vs Real Madrid.jpg" class="img-fluid football-highlight-image" alt="Real Madrid vs Espanyol">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary">La Liga Matchday</span>
+                <span class="text-muted small"><i class="fa-regular fa-calendar me-1"></i> Santiago Bernabéu</span>
+              </div>
+              <h3 class="fw-bold fs-4 text-dark mb-2">Real Madrid Dominate RCD Espanyol (4-1)</h3>
+              <p class="text-muted football-copy-lead">
+                Real Madrid produced a commanding comeback display at the Santiago Bernabéu. After falling behind against the run of play, relentless offensive pressure, rapid transitions, and sharp finishing sealed an emphatic 4-1 victory.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="fw-semibold text-danger"><i class="fa-solid fa-chart-line me-1"></i> Top of the Table</span>
+                <a href="#" class="btn btn-sm btn-outline-danger rounded-pill px-3">Full Stats</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Match 2: Paris vs Bayern Munich -->
+        <div class="col-lg-6 col-12" id="champions-league" data-aos="fade-left">
+          <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+            <img src="images/Highlight 3.png" class="img-fluid football-highlight-image" alt="PSG vs Bayern Munich">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-dark">UEFA Champions League</span>
+                <span class="text-muted small"><i class="fa-regular fa-calendar me-1"></i> Parc des Princes</span>
+              </div>
+              <h3 class="fw-bold fs-4 text-dark mb-2">Paris Saint-Germain 5-4 Bayern Munich</h3>
+              <p class="text-muted football-copy-lead">
+                In one of the most unforgettable 9-goal thrillers in modern Champions League history, PSG edged Bayern Munich 5-4 in a match packed with attacking brilliance, lightning counters, and breathless drama until the final whistle.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="fw-semibold text-danger"><i class="fa-solid fa-fire me-1"></i> Match of the Season</span>
+                <a href="#" class="btn btn-sm btn-outline-danger rounded-pill px-3">Watch Replay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: FIFA / COCA-COLA WORLD FOOTBALL RANKINGS
+       ========================================================================== -->
+  <section class="py-5 bg-light" id="rankings">
+    <div class="container">
+      <div class="football-section-header" data-aos="fade-up">
+        <div class="football-badge-pill">
+          <i class="fa-solid fa-ranking-star text-danger"></i> Global Standings
+        </div>
+        <h2>FIFA / Coca-Cola World Rankings</h2>
+        <p>Official points, movement, and global standings of the top national football squads.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Men's Football Rankings -->
+        <div class="col-lg-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 rounded-4 shadow-sm p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h4 class="fw-bold text-dark m-0"><i class="fa-solid fa-trophy text-warning me-2"></i> Men's World Top 5</h4>
+              <span class="badge bg-danger-subtle text-danger">Updated Monthly</span>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle table-hover mb-0">
+                <thead>
+                  <tr class="text-muted small">
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>PTS</th>
+                    <th>Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold fs-5 text-danger">1</td>
+                    <td><img src="flags/Argentina.png" class="ranking-flag" alt="Argentina"> Argentina</td>
+                    <td class="fw-semibold">1889.02</td>
+                    <td class="text-success"><i class="fa-solid fa-arrow-up"></i> +1</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">2</td>
+                    <td><img src="flags/france.png" class="ranking-flag" alt="France"> France</td>
+                    <td class="fw-semibold">1851.92</td>
+                    <td class="text-muted"><i class="fa-solid fa-minus"></i> 0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">3</td>
+                    <td><img src="flags/spain.png" class="ranking-flag" alt="Spain"> Spain</td>
+                    <td class="fw-semibold">1836.42</td>
+                    <td class="text-success"><i class="fa-solid fa-arrow-up"></i> +2</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">4</td>
+                    <td><img src="flags/ENG.png" class="ranking-flag" alt="England"> England</td>
+                    <td class="fw-semibold">1814.04</td>
+                    <td class="text-danger"><i class="fa-solid fa-arrow-down"></i> -1</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">5</td>
+                    <td><img src="flags/brasel.png" class="ranking-flag" alt="Brazil"> Brazil</td>
+                    <td class="fw-semibold">1784.37</td>
+                    <td class="text-muted"><i class="fa-solid fa-minus"></i> 0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Women's Football Rankings -->
+        <div class="col-lg-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 rounded-4 shadow-sm p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h4 class="fw-bold text-dark m-0"><i class="fa-solid fa-star text-warning me-2"></i> Women's World Top 5</h4>
+              <span class="badge bg-danger-subtle text-danger">Updated Monthly</span>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle table-hover mb-0">
+                <thead>
+                  <tr class="text-muted small">
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>PTS</th>
+                    <th>Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold fs-5 text-danger">1</td>
+                    <td><img src="flags/USA.png" class="ranking-flag" alt="USA"> United States</td>
+                    <td class="fw-semibold">2076.90</td>
+                    <td class="text-success"><i class="fa-solid fa-arrow-up"></i> +1</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">2</td>
+                    <td><img src="flags/ENG.png" class="ranking-flag" alt="England"> England</td>
+                    <td class="fw-semibold">2023.41</td>
+                    <td class="text-muted"><i class="fa-solid fa-minus"></i> 0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">3</td>
+                    <td><img src="flags/spain.png" class="ranking-flag" alt="Spain"> Spain</td>
+                    <td class="fw-semibold">2021.09</td>
+                    <td class="text-danger"><i class="fa-solid fa-arrow-down"></i> -1</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">4</td>
+                    <td><img src="flags/GER.png" class="ranking-flag" alt="Germany"> Germany</td>
+                    <td class="fw-semibold">2014.49</td>
+                    <td class="text-muted"><i class="fa-solid fa-minus"></i> 0</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold fs-5 text-secondary">5</td>
+                    <td><img src="flags/JPN.png" class="ranking-flag" alt="Japan"> Japan</td>
+                    <td class="fw-semibold">1974.34</td>
+                    <td class="text-success"><i class="fa-solid fa-arrow-up"></i> +2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: TRANSFER WIRE & HEADLINES
+       ========================================================================== -->
+  <section class="py-5" id="transfers">
+    <div class="container">
+      <div class="football-section-header" data-aos="fade-up">
+        <div class="football-badge-pill">
+          <i class="fa-solid fa-arrows-rotate text-danger"></i> Transfer Hub
+        </div>
+        <h2>Latest Transfer Rumors & News Wire</h2>
+        <p>Live whispers, completed agreements, and tactical signings across the football universe.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 rounded-4 shadow-sm p-4">
+            <span class="badge bg-warning text-dark mb-2 align-self-start fw-bold">RUMOR MILL</span>
+            <h5 class="fw-bold text-dark">Real Madrid Target Bundesliga Playmaker</h5>
+            <p class="text-muted small">Madrid officials have initiated contact regarding a summer transfer package, eyeing midfield depth for next season’s Champions League campaign.</p>
+            <span class="text-danger fw-semibold small mt-auto"><i class="fa-solid fa-clock me-1"></i> 2 hours ago</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 rounded-4 shadow-sm p-4">
+            <span class="badge bg-success text-white mb-2 align-self-start fw-bold">CONTRACT EXTENSION</span>
+            <h5 class="fw-bold text-dark">Premier League Striker Signs 5-Year Deal</h5>
+            <p class="text-muted small">Following interest from multiple European superpowers, the star striker commits his peak years with a record-setting long-term extension.</p>
+            <span class="text-danger fw-semibold small mt-auto"><i class="fa-solid fa-clock me-1"></i> 4 hours ago</span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 rounded-4 shadow-sm p-4">
+            <span class="badge bg-info text-dark mb-2 align-self-start fw-bold">INJURY BULLETIN</span>
+            <h5 class="fw-bold text-dark">Star Midfielder Cleared for Clasico Derby</h5>
+            <p class="text-muted small">Medical staff have given the green light after full training sessions, giving the manager a crucial boost ahead of the weekend derby clash.</p>
+            <span class="text-danger fw-semibold small mt-auto"><i class="fa-solid fa-clock me-1"></i> 6 hours ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: FOOTBALL NEWSLETTER BANNER
+       ========================================================================== -->
+  <section class="py-5 football-newsletter">
+    <div class="container text-center py-4" data-aos="zoom-in">
+      <div class="football-badge-pill">
+        <i class="fa-solid fa-envelope me-1"></i> Free Football Digest
+      </div>
+      <h2 class="fw-bold fs-1 mb-3">Never Miss a Football Headline</h2>
+      <p class="text-light opacity-75 mx-auto mb-4 football-newsletter-copy">
+        Join over 50,000 sports lovers receiving verified match summaries, transfer updates, and tactical breakdowns straight to their inbox.
+      </p>
+      <form class="d-flex flex-column flex-sm-row justify-content-center gap-2 mx-auto football-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Sport Gyaan Football Updates!');">
+        <input type="email" class="form-control rounded-pill px-4 py-3" placeholder="Enter your email address..." required>
+        <button type="submit" class="btn btn-main px-4 py-3 rounded-pill">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo & Bio -->
+      <div class="footer-box">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Sports Gyan Logo.png" class="footer-logo-img" alt="Sport Gyaan Logo">
+        </a>
+        <p>
+          Your ultimate destination for sports news, live updates, rankings, player stories and much more.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-box">
+        <h3>QUICK LINKS</h3>
+        <div class="links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="football.html">Football News</a></li>
+            <li><a href="index.html#latest-news">Live Scores</a></li>
+          </ul>
+          <ul>
+            <li><a href="index.html#rankings">Rankings</a></li>
+            <li><a href="football.html#indian-legends">Players</a></li>
+            <li><a href="index.html#top-stories">Stories</a></li>
+            <li><a href="index.html">Products</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Popular Sports -->
+      <div class="footer-box">
+        <h3>POPULAR SPORTS</h3>
+        <div class="links">
+          <ul>
+            <li><a href="index.html#highlights" class="text-secondary"><i class="fa-solid fa-baseball text-danger me-1"></i> Cricket</a></li>
+            <li><a href="football.html" class="text-secondary"><i class="fa-solid fa-futbol text-danger me-1"></i> Football</a></li>
+            <li><a href="index.html#latest-news" class="text-secondary"><i class="fa-solid fa-basketball text-danger me-1"></i> Basketball</a></li>
+          </ul>
+          <ul>
+            <li><a href="about.html#what-we-cover" class="text-secondary"><i class="fa-solid fa-table-tennis-paddle-ball text-danger me-1"></i> Tennis</a></li>
+            <li><a href="index.html#latest-news" class="text-secondary"><i class="fa-solid fa-gamepad text-danger me-1"></i> Esports</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social & Contact -->
+      <div class="footer-box">
+        <h3>FOLLOW US</h3>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f text-primary"></i></a>
+          <a href="https://www.instagram.com/sportgyaan_official/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-danger"></i></a>
+          <a href="#" aria-label="X Twitter"><i class="fab fa-x-twitter text-white"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-danger"></i></a>
+        </div>
+        <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-danger"></i> info@sportgyaan.com</p>
+        <p><i class="fa-solid fa-globe me-2 text-danger"></i> www.sportgyaan.com</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &#169; 2026 Sport Gyaan. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

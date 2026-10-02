@@ -117,6 +117,7 @@
 .text-sports-gradient {
   background: linear-gradient(135deg, #ffffff 0%, #ff4b2b 60%, #ff2d2d 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 5px 25px rgba(255, 45, 45, 0.3);
 }
@@ -1057,6 +1058,7 @@
 .slogan-title span {
   background: linear-gradient(135deg, #ff4b2b 0%, #ff8c42 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

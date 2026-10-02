@@ -33,6 +33,11 @@
         <img src="images/Sports Gyan Logo.png" class="logo" alt="Sport Gyaan Logo">
       </a>
 
+      <!-- Mobile Quick Search Button -->
+      <button class="mobile-search-btn d-lg-none" type="button" id="mobileSearchTrigger" aria-label="Open search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
       <!-- Clean Animated Hamburger Toggler -->
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-bar bar-top"></span>
@@ -72,7 +77,7 @@
                       </div>
                       <div class="sub-cat-content">
                         <ul class="sub-cat-list">
-                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
+                          <li><a href="football.html"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Cricket</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Basketball</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Hockey</a></li>
@@ -149,7 +154,7 @@
                       </div>
                       <div class="sub-cat-content">
                         <ul class="sub-cat-list">
-                          <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
+                          <li><a href="football.html"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Cricket Updates</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Basketball Wire</a></li>
                           <li><a href="index.html"><i class="fa-solid fa-angle-right me-1"></i> Tennis & Rackets</a></li>
@@ -331,6 +336,33 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </li>
+
+          <!-- Navbar Search Component -->
+          <li class="nav-item nav-search-item ms-lg-2 position-relative">
+            <div class="nav-search-wrapper" id="navSearchWrapper">
+              <i class="fa-solid fa-magnifying-glass nav-search-icon" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                class="form-control nav-search-input" 
+                id="navSearchInput" 
+                placeholder="Search sports, news, matches..." 
+                autocomplete="off" 
+                spellcheck="false"
+                aria-label="Search sports and news"
+              >
+              <button type="button" class="nav-search-clear" id="searchClearBtn" aria-label="Clear search" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <!-- Live Search Suggestions Dropdown -->
+            <div class="search-results-dropdown" id="searchResultsDropdown" style="display: none;">
+              <div class="search-results-header">
+                <span class="search-count" id="searchCount">Sport Gyaan Search</span>
+                <span class="search-hint"><kbd>Enter</kbd> to open</span>
+              </div>
+              <div class="search-results-list" id="searchResultsList"></div>
             </div>
           </li>
 

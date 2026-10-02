@@ -30,6 +30,11 @@
         <img src="images/Sports Gyan Logo.png" class="logo" alt="Sport Gyaan Logo">
       </a>
 
+      <!-- Mobile Quick Search Button -->
+      <button class="mobile-search-btn d-lg-none" type="button" id="mobileSearchTrigger" aria-label="Open search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
       <!-- Clean Animated Hamburger Toggler -->
       <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-bar bar-top"></span>
@@ -69,7 +74,7 @@
                       </div>
                       <div class="sub-cat-content">
                         <ul class="sub-cat-list">
-                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
+                          <li><a href="football.html"><i class="fa-solid fa-angle-right me-1"></i> Football</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Basketball</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Hockey</a></li>
@@ -147,7 +152,7 @@
                       </div>
                       <div class="sub-cat-content">
                         <ul class="sub-cat-list">
-                          <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
+                          <li><a href="football.html"><i class="fa-solid fa-angle-right me-1"></i> Football News</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Cricket Updates</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Basketball Wire</a></li>
                           <li><a href="#"><i class="fa-solid fa-angle-right me-1"></i> Tennis & Rackets</a></li>
@@ -349,6 +354,33 @@
             </div>
           </li>
 
+          <!-- Navbar Search Component -->
+          <li class="nav-item nav-search-item ms-lg-2 position-relative">
+            <div class="nav-search-wrapper" id="navSearchWrapper">
+              <i class="fa-solid fa-magnifying-glass nav-search-icon" aria-hidden="true"></i>
+              <input 
+                type="text" 
+                class="form-control nav-search-input" 
+                id="navSearchInput" 
+                placeholder="Search sports, news, matches..." 
+                autocomplete="off" 
+                spellcheck="false"
+                aria-label="Search sports and news"
+              >
+              <button type="button" class="nav-search-clear" id="searchClearBtn" aria-label="Clear search" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <!-- Live Search Suggestions Dropdown -->
+            <div class="search-results-dropdown" id="searchResultsDropdown" style="display: none;">
+              <div class="search-results-header">
+                <span class="search-count" id="searchCount">Sport Gyaan Search</span>
+                <span class="search-hint"><kbd>Enter</kbd> to open</span>
+              </div>
+              <div class="search-results-list" id="searchResultsList"></div>
+            </div>
+          </li>
+
           <!-- Desktop Login Nav Item -->
           <li class="nav-item d-none d-lg-block ms-lg-2">
             <a class="nav-link nav-login-btn text-white" href="#">
@@ -391,7 +423,7 @@
   </section>
 
   <!-- Top Stories Section (Responsive Grid, No 900px/150px overflow) -->
-  <section class="top-stories-section">
+  <section class="top-stories-section" id="top-stories">
     <div class="container">
       <div class="top-header">
         <h2 class="fw-bold">Top Stories</h2>
@@ -439,7 +471,7 @@
   </section>
 
   <!-- World Rankings Section -->
-  <section class="rankings-section py-5">
+  <section class="rankings-section py-5" id="rankings">
     <div class="container">
       <div class="rank-section-header">
         <h2>Sport Gyaan/Coca-Cola World Rankings</h2>
@@ -623,7 +655,8 @@
   </section>
 
   <!-- Highlights Section -->
-  <section class="services" id="section3">
+  <section class="services position-relative" id="highlights">
+    <span id="section3" style="position: absolute; top: -80px; left: 0;"></span>
     <div class="container">
       <h2 class="text-center mb-5 fw-bold">Highlights</h2>
       <div class="row g-4">
@@ -697,7 +730,8 @@
   </section>
 
   <!-- Winter Olympics Feature Section -->
-  <section class="about" id="section4">
+  <section class="about position-relative" id="winter-olympics">
+    <span id="section4" style="position: absolute; top: -80px; left: 0;"></span>
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6 col-12">
@@ -716,7 +750,7 @@
   </section>
 
   <!-- Latest News Video / Match Stories Section -->
-  <section class="services">
+  <section class="services" id="latest-news">
     <div class="container">
       <h2 class="text-center mb-5 fw-bold">Latest News</h2>
       <div class="row g-4">
@@ -790,7 +824,7 @@
   </section>
 
   <!-- Rugby Champions Section -->
-  <section class="about">
+  <section class="about" id="rugby">
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6 col-12">
